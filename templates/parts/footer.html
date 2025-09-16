@@ -28,9 +28,9 @@
                         <!-- Get In Touch -->
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <h3 class="text-light mb-4">تواصل معنا</h3>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-warning ms-2"></i>١٢٣ شارع، نيويورك، أمريكا</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-warning ms-2"></i>info@example.com</p>
-                            <p class="mb-2"><i class="bi bi-telephone text-warning ms-2"></i>+012 345 67890</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt text-warning ms-2"></i>{{ info_contact.location_contact }}</p>
+                            <p class="mb-4"><i class="bi bi-envelope-open text-warning ms-2"></i>{{ info_contact.email_contact }}</p>
+                            <p class="mb-2"><i class="bi bi-telephone text-warning ms-2"></i>{{ info_contact.phone_contact }}</p>
                             <div class="d-flex mt-3">
                                 <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -42,12 +42,12 @@
                         <!-- Quick Links -->
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <h3 class="text-light mb-4">روابط سريعة</h3>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>الرئيسية</a>
+                            <a class="text-light mb-2 d-block" href="{% url 'core:home' %}"><i class="bi bi-arrow-left text-warning ms-2"></i>الرئيسية</a>
                             <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>من نحن</a>
                             <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>خدماتنا</a>
                             <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>فريق العمل</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>أحدث المقالات</a>
-                            <a class="text-light d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>اتصل بنا</a>
+                            <a class="text-light mb-2 d-block" href="{% url 'blog:blog_home' %}"><i class="bi bi-arrow-left text-warning ms-2"></i>أحدث المقالات</a>
+                            <a class="text-light d-block" href="{% url 'contact:contact_home' %}"><i class="bi bi-arrow-left text-warning ms-2"></i>اتصل بنا</a>
                         </div>
 
                         <!-- Popular Links -->
@@ -105,21 +105,20 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-warning me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
+                                <p class="mb-0">{{ info_contact.location_contact }}</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-warning me-2"></i>
-                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0">{{ info_contact.email_contact }}</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-warning me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
+                                <p class="mb-0">+{{ info_contact.phone_contact }}</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-warning btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-warning btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-warning btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-warning btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                {% for social in social_media_contacts %}
+                                <a class="btn btn-warning btn-square me-2" href="{{ social.url }}"><i class="fab {{ social.icon_name }} fw-normal"></i></a>
+                                {% endfor %}
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
