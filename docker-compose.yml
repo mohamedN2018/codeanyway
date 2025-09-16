@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  codeanyway:
+    build: .
+    restart: always
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      # - "8080:8000"  # 8080 على جهازك، 8000 داخل الـ container
+      - "80:8000"
+
+    command: >
+      gunicorn --chdir /usr/src/app
+               --access-logfile -
+               --error-logfile -
+               --bind 0.0.0.0:8000
+               codeanyway.wsgi:application
