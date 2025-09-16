@@ -1,8 +1,9 @@
--i https://pypi.org/simple
-asgiref==3.9.1; python_version >= '3.9'
-django==5.2.6; python_version >= '3.10'
-django-jazzmin==3.0.1; python_version >= '3.8'
-pillow==11.3.0; python_version >= '3.9'
+asgiref==3.9.1
+Django==5.2.6
+django-jazzmin==3.0.1
+gunicorn==23.0.0
+packaging==25.0
+pillow==11.3.0
 python-decouple==3.8
-sqlparse==0.5.3; python_version >= '3.8'
-tzdata==2025.2; python_version >= '2'
+sqlparse==0.5.3
+tzdata==2025.2
