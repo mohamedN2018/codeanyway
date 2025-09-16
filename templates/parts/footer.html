@@ -2,6 +2,83 @@
 {% load i18n %}
 
 {% if LANGUAGE_CODE == 'ar' %}
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <!-- About / Newsletter -->
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-warning p-4 rounded">
+                        <a href="index.html" class="navbar-brand mb-3">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie ms-2"></i>كود أني واي</h1>
+                        </a>
+                        <p class="mb-4 small">لوريم إيبسوم هو نص شكلي يُستخدم في صناعات الطباعة والتنضيد. يتم استخدامه كنص بديل لتوضيح شكل التصميم.</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3 text-end" placeholder="بريدك الإلكتروني">
+                                <button class="btn btn-dark">اشترك</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Links & Contact -->
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <!-- Get In Touch -->
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <h3 class="text-light mb-4">تواصل معنا</h3>
+                            <p class="mb-2"><i class="bi bi-geo-alt text-warning ms-2"></i>١٢٣ شارع، نيويورك، أمريكا</p>
+                            <p class="mb-2"><i class="bi bi-envelope-open text-warning ms-2"></i>info@example.com</p>
+                            <p class="mb-2"><i class="bi bi-telephone text-warning ms-2"></i>+012 345 67890</p>
+                            <div class="d-flex mt-3">
+                                <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-warning btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h3 class="text-light mb-4">روابط سريعة</h3>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>الرئيسية</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>من نحن</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>خدماتنا</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>فريق العمل</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>أحدث المقالات</a>
+                            <a class="text-light d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>اتصل بنا</a>
+                        </div>
+
+                        <!-- Popular Links -->
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h3 class="text-light mb-4">روابط شائعة</h3>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>الرئيسية</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>من نحن</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>خدماتنا</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>فريق العمل</a>
+                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>أحدث المقالات</a>
+                            <a class="text-light d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>اتصل بنا</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="container-fluid text-white py-3" style="background: #061429;" dir="rtl">
+        <div class="container text-center">
+            <p class="mb-0 small">
+                &copy; <a class="text-white border-bottom" href="#">كود أني واي</a>. جميع الحقوق محفوظة.  
+                تصميم <a class="text-white border-bottom" href="https://mohamednabilpro.deplois.net">محمد نبيل</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+{% else %}
+
  <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -92,82 +169,5 @@
         </div>
     </div>
     <!-- Footer End -->
-
-{% else %}
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
-        <div class="container py-5">
-            <div class="row gx-5">
-                <!-- About / Newsletter -->
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-warning p-4 rounded">
-                        <a href="index.html" class="navbar-brand mb-3">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie ms-2"></i>كود أني واي</h1>
-                        </a>
-                        <p class="mb-4 small">لوريم إيبسوم هو نص شكلي يُستخدم في صناعات الطباعة والتنضيد. يتم استخدامه كنص بديل لتوضيح شكل التصميم.</p>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3 text-end" placeholder="بريدك الإلكتروني">
-                                <button class="btn btn-dark">اشترك</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Links & Contact -->
-                <div class="col-lg-8 col-md-6">
-                    <div class="row gx-5">
-                        <!-- Get In Touch -->
-                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                            <h3 class="text-light mb-4">تواصل معنا</h3>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-warning ms-2"></i>١٢٣ شارع، نيويورك، أمريكا</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-warning ms-2"></i>info@example.com</p>
-                            <p class="mb-2"><i class="bi bi-telephone text-warning ms-2"></i>+012 345 67890</p>
-                            <div class="d-flex mt-3">
-                                <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-warning btn-square ms-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-warning btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Quick Links -->
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <h3 class="text-light mb-4">روابط سريعة</h3>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>الرئيسية</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>من نحن</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>خدماتنا</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>فريق العمل</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>أحدث المقالات</a>
-                            <a class="text-light d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>اتصل بنا</a>
-                        </div>
-
-                        <!-- Popular Links -->
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <h3 class="text-light mb-4">روابط شائعة</h3>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>الرئيسية</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>من نحن</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>خدماتنا</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>فريق العمل</a>
-                            <a class="text-light mb-2 d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>أحدث المقالات</a>
-                            <a class="text-light d-block" href="#"><i class="bi bi-arrow-left text-warning ms-2"></i>اتصل بنا</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="container-fluid text-white py-3" style="background: #061429;" dir="rtl">
-        <div class="container text-center">
-            <p class="mb-0 small">
-                &copy; <a class="text-white border-bottom" href="#">كود أني واي</a>. جميع الحقوق محفوظة.  
-                تصميم <a class="text-white border-bottom" href="https://mohamednabilpro.deplois.net">محمد نبيل</a>
-            </p>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
+    
 {% endif %}
