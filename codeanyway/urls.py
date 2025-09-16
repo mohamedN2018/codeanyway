@@ -13,6 +13,8 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('core.urls'), name='core'),
+    path('contact/', include('contact.urls'), name='contact'),
+    path('blog/', include('blog.urls'), name='blog')
 )
 
 if settings.DEBUG:

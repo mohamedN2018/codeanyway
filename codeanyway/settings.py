@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'contact',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -166,11 +168,8 @@ JAZZMIN_SETTINGS = {
     "site_title": "MohaMed",
     "site_header": "MohaMed",
     "site_brand": "MohaMed",
-    "site_logo": "/Logo_Site/logosite.png",
-    # "login_logo": "/Logo_Site/Artboard.png",
-    # "login_logo_dark": "/Logo_Site/Artboard.png",
-    "login_logo": "",
-    "login_logo_dark": "",
+    "site_logo": "/Logo_Site/3-screncode.png",
+    "login_logo": "/Logo_Site/logosite-size.png",
 
     "site_logo_classes": "img-circle",
     "site_icon": "/Logo_Site/logosite.png",
