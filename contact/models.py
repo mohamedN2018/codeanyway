@@ -4,9 +4,10 @@ from django.db import models
 
 
 class info(models.Model):
-    phone_contact = models.IntegerField(max_length=20, null=True, blank=True)
+    phone_contact = models.IntegerField(null=True, blank=True)
     email_contact = models.EmailField(max_length=25, null=True, blank=True)
     location_contact = models.CharField(max_length=60, null=True, blank=True)
+    location_contact_ar = models.CharField(max_length=60, null=True, blank=True)
     iframe_map_contact = models.CharField(null=True, blank=True)
     
     class Meta:

@@ -2,18 +2,34 @@
 {% load i18n %}
 
 <!DOCTYPE html>
-<html lang="{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}" data-bs-theme="dark">
+<html lang="{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}" data-bs-theme="dark" scroll-behavior: smooth>
 
 <head>
     <meta charset="utf-8">
-    <title>codeamyway</title>
+    {% if LANGUAGE_CODE == 'ar' %}
+        {% if hero_sliders %}
+        <title>{{ hero_sliders.title_site_ar }}</title>
+        {% else %}
+        <title>codeamyway mmmmm</title>
+        {% endif %}
+    {% else %}
+        {% if hero_sliders %}
+        <title>{{ hero_sliders.title_site }}</title>
+        {% else %}
+        <title>codeamyway mmmmm</title>
+        {% endif %}
+    {% endif %}
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
+    <meta name="google-site-verification" content="TzQXBlOmuqIETxQ13-mxqUPvVRcUEBLyaKeAZLxjb1c" />
     <!-- Favicon -->
+    {% if hero_sliders.favicon_site %}
+    <link href="{{ hero_sliders.favicon_site.url }}" rel="icon">
+    {% else %}
     <link href="{% static 'img/favicon.ico' %}" rel="icon">
-
+    {% endif %}
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,7 +107,20 @@
                 }
             });
         });
+
+        // Example using JavaScript for smooth scroll on link click
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
+
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

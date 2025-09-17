@@ -57,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
                     <form>
@@ -86,6 +87,7 @@
                         tabindex="0"></iframe>
                 </div>
             </div>
+
         </div>
     </div>
     <!-- Contact End -->
@@ -114,33 +116,16 @@
 {% endblock %}
 
 {% block content_ar %}
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;" dir="rtl">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">تواصل معنا</h1>
-            <a href="{% url 'core:home' %}" class="h5 text-white">الرئيسية</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="{% url 'contact:contact_home' %}" class="h5 text-white">تواصل</a>
-        </div>
-    </div>
-</div>
-<!-- بحث ملء الشاشة يبدأ -->
-<div class="modal fade" id="searchModal" tabindex="-1" dir="rtl">
-    <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-            <div class="modal-header border-0">
-                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-            </div>
-            <div class="modal-body d-flex align-items-center justify-content-center">
-                <div class="input-group" style="max-width: 600px;">
-                    <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="اكتب كلمة البحث">
-                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                </div>
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;" dir="rtl">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">تواصل معنا</h1>
+                <a href="{% url 'core:home' %}" class="h5 text-white">الرئيسية</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="{% url 'contact:contact_home' %}" class="h5 text-white">تواصل</a>
             </div>
         </div>
     </div>
-</div>
-<!-- بحث ملء الشاشة ينتهي -->
 
 <!-- تواصل معنا يبدأ -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
@@ -179,7 +164,7 @@
                     </div>
                     <div class="pe-4">
                         <h5 class="mb-2">زور مكتبنا</h5>
-                        <h4 class="text-primary mb-0">{{ info_contact.location_contact }}</h4>
+                        <h4 class="text-primary mb-0">{{ info_contact.location_contact_ar }}</h4>
                     </div>
                 </div>
             </div>

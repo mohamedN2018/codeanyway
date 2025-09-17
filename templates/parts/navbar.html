@@ -7,7 +7,11 @@
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
                 <h1 class="m-0">
                     <a href="{% url 'core:home' %}" class="navbar-brand p-0">
-                      <img src="{% static 'img/2-textcode.png' %}" alt="الشعار" style="width: 30%; height: 100%;">
+                        {% if hero_sliders %}
+                            <img src="{{ hero_sliders.logo_site_ar.url }}" alt="الشعار" style="width: 30%; height: 100%;">
+                        {% else %}
+                            <img src="{% static 'img/2-textcode.png' %}" alt="الشعار" style="width: 30%; height: 100%;">
+                        {% endif %}
                     </a>
                 </h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -86,7 +90,11 @@
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
                 <h1 class="m-0">
                     <a href="{% url 'core:home' %}" class="navbar-brand p-0">
-                        <img src="{% static 'img/1-textcode.png' %}" alt="Logo" style="width: 30%; height: 100%;">
+                        {% if hero_sliders %}
+                            <img src="{{ hero_sliders.logo_site.url }}" alt="الشعار" style="width: 30%; height: 100%;">
+                        {% else %}
+                            <img src="{% static 'img/2-textcode.png' %}" alt="الشعار" style="width: 30%; height: 100%;">
+                        {% endif %}
                     </a>
                 </h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

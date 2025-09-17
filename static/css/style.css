@@ -491,3 +491,33 @@ h6,
         margin-bottom: -75px;
     }
 }
+
+
+/*** scrollbar ***/
+    /* Styling the entire scrollbar */
+    ::-webkit-scrollbar {
+    width: 10px; /* Adjust width for vertical scrollbar */
+    height: 10px; /* Adjust height for horizontal scrollbar */
+    }
+
+    /* Styling the scrollbar track (the background) */
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+    }
+
+    /* Styling the scrollbar thumb (the draggable handle) */
+    ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    }
+
+    /* Styling the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+
+    /* Styling the scrollbar corner (where horizontal and vertical meet) */
+    ::-webkit-scrollbar-corner {
+    background: #ccc;
+    }
