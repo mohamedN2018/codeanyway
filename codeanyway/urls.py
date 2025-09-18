@@ -16,7 +16,10 @@ urlpatterns += i18n_patterns(
     path('contact/', include('contact.urls'), name='contact'),
     path('blog/', include('blog.urls'), name='blog'),
     path('hero/', include('hero.urls'), name='hero'),
+    path('about/', include('about.urls'), name='about'),
+    # path('services/', include('services.urls'), name='services'),
 )
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

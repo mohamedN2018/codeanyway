@@ -20,13 +20,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto py-0 text-end" style="width: max-content;">
                     <a href="{% url 'core:home' %}" class="nav-item nav-link active">الرئيسية</a>
-                    <a href="about.html" class="nav-item nav-link">من نحن</a>
-                    <a href="service.html" class="nav-item nav-link">الخدمات</a>
-                    
+                    <a href="{% if home %}#about{% else %}{% url 'core:home' %}#about{% endif %}" class="nav-item nav-link">من نحن</a>
+                    <a href="{% if home %}#services{% else %}{% url 'core:home' %}#services{% endif %}" class="nav-item nav-link">الخدمات</a>  
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">المدونة</a>
                         <div class="dropdown-menu m-0 text-end">
-                            <a href="{% url 'blog:blog_home' %}" class="dropdown-item">شبكة المدونة</a>
+                            <a href="{% url 'blog:blog_home' %}" class="dropdown-item">شبكة المدونة</a><hr>
                             <a href="#" class="dropdown-item">تفاصيل المدونة</a>
                         </div>
                     </div>
@@ -103,12 +102,12 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="{% url 'core:home' %}" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="{% if home %}#about{% else %}{% url 'core:home' %}#about{% endif %}" class="nav-item nav-link">About</a>
+                    <a href="{% if home %}#services{% else %}{% url 'core:home' %}#services{% endif %}" class="nav-item nav-link">Services</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{% url 'blog:blog_home' %}" class="dropdown-item">Blog Grid</a>
+                            <a href="{% url 'blog:blog_home' %}" class="dropdown-item">Blog Grid</a><hr>
                             <a href="#" class="dropdown-item">Blog Detail</a>
                         </div>
                     </div>

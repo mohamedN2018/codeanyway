@@ -1,0 +1,46 @@
+{% load static %}
+{% load i18n %}
+    <!-- About Start -->
+    <div id="about" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-warning text-uppercase">{{ Abouts.smalltext }}</h5>
+                        <h1 class="mb-0">{{ Abouts.title }}</h1>
+                    </div>
+                    <p class="mb-4">{{ Abouts.description_title }}</p>
+                    <div class="row g-0 mb-3">
+                        {% for DetailsSmall in DetailsSmalls %}
+                            <div class="col-sm-6 wow zoomIn" 
+                                data-wow-delay="{% if forloop.counter <= 2 %}0.2s{% else %}0.4s{% endif %}">
+                                <h5 class="mb-3">
+                                    <i class="fa fa-{{ DetailsSmall.icon }} text-warning me-3"></i>{{ DetailsSmall.title }}
+                                </h5>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-warning d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Call to ask any question</h5>
+                            <h4 class="text-warning mb-0">{{ info_contact.phone_contact }}</h4>
+                        </div>
+                    </div>
+                    <a href="{% url 'contact:contact_home' %}" class="btn btn-warning py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        {% if Abouts.image %}
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ Abouts.image.url }}" style="object-fit: cover;">
+                        {% else %}
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/about.jpg' %}" style="object-fit: cover;">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->

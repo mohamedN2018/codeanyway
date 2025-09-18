@@ -1,0 +1,34 @@
+{% load static %}
+{% load i18n %}
+
+<!-- Facts Start -->
+<div class="container-fluid facts py-5 pt-lg-0" dir="rtl">
+    <div class="container py-5 pt-lg-0">
+        <div class="row gx-0">
+
+            {% for fact in facts %}
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                <div class="{% if fact.icon == 'check' %} bg-light {% else %} bg-warning {% endif %} shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    
+                    <!-- الأيقونة -->
+                    <div class="{% if fact.icon == 'check' %} bg-warning {% else %} bg-light {% endif %} d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-{{ fact.icon }} {% if fact.icon == 'check' %} text-white {% else %} text-warning {% endif %}"></i>
+                    </div>
+                    
+                    <!-- النصوص -->
+                    <div class="pe-4"><!-- بدّل ps-4 بـ pe-4 للاتجاه من اليمين -->
+                        <h5 class="{% if fact.icon == 'check' %} text-warning {% else %} text-white {% endif %} mb-0">
+                            {{ fact.title_ar }} <!-- العنوان بالعربي -->
+                        </h5>
+                        <h1 class="{% if fact.icon == 'check' %} {% else %} text-white {% endif %} mb-0" data-toggle="counter-up">
+                            {{ fact.number }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- Facts End -->

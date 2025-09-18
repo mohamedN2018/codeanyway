@@ -8,150 +8,22 @@
     {% include "hero/home_hero_en.html" %}
     <!-- end Header Carousel Start /hero -->
 
- 
-
     <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-warning shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-users text-warning"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Happy Clients</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-warning d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-warning mb-0">Projects Done</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-warning shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-award text-warning"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white mb-0">Win Awards</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include "CoreFactsStart.html" %}
     <!-- Facts Start -->
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-warning text-uppercase">About Us</h5>
-                        <h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
-                    </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
-                    <div class="row g-0 mb-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-warning me-3"></i>Award Winning</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-warning me-3"></i>Professional Staff</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-warning me-3"></i>24/7 Support</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-warning me-3"></i>Fair Prices</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-warning d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-warning mb-0">{{ info_contact.phone_contact }}</h4>
-                        </div>
-                    </div>
-                    <a href="{% url 'contact:contact_home' %}" class="btn btn-warning py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
-                </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/about.jpg' %}" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include "corepage.html" %}
     <!-- About End -->
 
-
     <!-- Features Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-warning text-uppercase">Why Choose Us</h5>
-                <h1 class="mb-0">We Are Here to Grow Your Business Exponentially</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-cubes text-white"></i>
-                            </div>
-                            <h4>Best In Industry</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-award text-white"></i>
-                            </div>
-                            <h4>Award Winning</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/feature.jpg' %}" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="row g-5">
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-users-cog text-white"></i>
-                            </div>
-                            <h4>Professional Staff</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
-                        </div>
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                                <i class="fa fa-phone-alt text-white"></i>
-                            </div>
-                            <h4>24/7 Support</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include "maincore.html" %}
     <!-- Features Start -->
 
 
     <!-- Service Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div id="services" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-warning text-uppercase">Our Services</h5>
@@ -465,191 +337,19 @@
     <!-- end الكاروصل /hero -->
 
     <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0" dir="rtl">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-
-                <!-- العملاء السعداء -->
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-warning shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-users text-warning"></i>
-                        </div>
-                        <div class="pe-4">
-                            <h5 class="text-white mb-0">عملاء سعداء</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- المشاريع المنجزة -->
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-warning d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check text-white"></i>
-                        </div>
-                        <div class="pe-4">
-                            <h5 class="text-warning mb-0">مشاريع منجزة</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- الجوائز المحققة -->
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="bg-warning shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
-                            <i class="fa fa-award text-warning"></i>
-                        </div>
-                        <div class="pe-4">
-                            <h5 class="text-white mb-0">جوائز محققة</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    {% include "CoreFactsStart_ar.html" %}
     <!-- Facts End -->
 
     <!-- حول Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
-        <div class="container py-5">
-            <div class="row g-5">
-
-                <!-- النصوص -->
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-warning text-uppercase">من نحن</h5>
-                        <h1 class="mb-0">أفضل حلول تكنولوجيا المعلومات مع خبرة 10 سنوات</h1>
-                    </div>
-                    <p class="mb-4">
-                        نحن نقدم حلول تقنية مبتكرة تناسب مختلف المجالات. خبرتنا الطويلة تساعدنا في تقديم خدمات عالية الجودة 
-                        تلبي احتياجات عملائنا وتدعم نجاح أعمالهم بشكل مستمر.
-                    </p>
-
-                    <!-- مميزات -->
-                    <div class="row g-0 mb-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-warning ms-3"></i>حاصلون على جوائز</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-warning ms-3"></i>فريق عمل محترف</h5>
-                        </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-warning ms-3"></i>دعم فني 24/7</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-warning ms-3"></i>أسعار عادلة</h5>
-                        </div>
-                    </div>
-
-                    <!-- رقم التواصل -->
-                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="bg-warning d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="pe-4">
-                            <h5 class="mb-2">اتصل لطرح أي سؤال</h5>
-                            <h4 class="text-warning mb-0">{{ info_contact.phone_contact }}</h4>
-                        </div>
-                    </div>
-
-                    <!-- زر -->
-                    <a href="{% url 'contact:contact_home' %}" class="btn btn-warning py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">
-                        اطلب عرض سعر
-                    </a>
-                </div>
-
-                <!-- صورة -->
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" 
-                            data-wow-delay="0.9s" src="{% static 'img/about.jpg' %}" style="object-fit: cover;" alt="من نحن">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    {% include "corepage_ar.html" %}
     <!-- حول End -->
 
     <!-- ميزات Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-warning text-uppercase">لماذا تختارنا</h5>
-                <h1 class="mb-0">نحن هنا لننمي عملك بشكل مضاعف</h1>
-            </div>
-            <div class="row g-5">
-
-                <!-- العمود الأول -->
-                <div class="col-lg-4">
-                    <div class="row g-5">
-
-                        <!-- الأفضل في المجال -->
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" 
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-cubes text-white"></i>
-                            </div>
-                            <h4>الأفضل في المجال</h4>
-                            <p class="mb-0">نتميز بتقديم حلول مبتكرة تواكب تطورات السوق وتلبي احتياجات عملك.</p>
-                        </div>
-
-                        <!-- جوائز -->
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" 
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-award text-white"></i>
-                            </div>
-                            <h4>حاصلون على جوائز</h4>
-                            <p class="mb-0">خبراتنا وإنجازاتنا جعلتنا نحصد ثقة العملاء وننال العديد من الجوائز.</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- صورة في الوسط -->
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" 
-                            data-wow-delay="0.1s" src="{% static 'img/feature.jpg' %}" 
-                            style="object-fit: cover;" alt="مميزاتنا">
-                    </div>
-                </div>
-
-                <!-- العمود الثالث -->
-                <div class="col-lg-4">
-                    <div class="row g-5">
-
-                        <!-- فريق عمل محترف -->
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" 
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-users-cog text-white"></i>
-                            </div>
-                            <h4>فريق عمل محترف</h4>
-                            <p class="mb-0">فريقنا من الخبراء المتخصصين جاهز لتقديم أفضل الحلول لنجاحك.</p>
-                        </div>
-
-                        <!-- دعم فني -->
-                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
-                            <div class="bg-warning rounded d-flex align-items-center justify-content-center mb-3" 
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-phone-alt text-white"></i>
-                            </div>
-                            <h4>دعم فني 24/7</h4>
-                            <p class="mb-0">نقدم خدمة عملاء متواصلة على مدار الساعة لضمان راحتك ونجاحك.</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    {% include "maincore_ar.html" %}
     <!-- ميزات End -->
 
     <!-- خدماتنا Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
+    <div id="services" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-warning text-uppercase">خدماتنا</h5>
