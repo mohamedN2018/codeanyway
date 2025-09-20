@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content_ar %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 bg-header mb-5" dir="rtl">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">الخدمات</h1>
+                <a href="{% url 'core:home' %}" class="h5 text-white">الرئيسية</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="{% url 'services' %}" class="h5 text-white">الخدمات</a>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Service Details Start -->
+    <div id="service-details" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="rtl">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- تفاصيل الخدمة -->
+                <div class="col-lg-8">
+                    <h2 class="mb-4 text-warning">{{ service_item.service_name_ar }}</h2>
+                    <p class="mb-4">{{ service_item.service_details_ar }}</p>
+
+                    <!-- صورة الخدمة -->
+                    {% if service_item.image %}
+                    <div class="mb-4">
+                        <img src="{{ service_item.image.url }}" alt="{{ service_item.service_name_ar }}" class="img-fluid rounded shadow">
+                    </div>
+                    {% endif %}
+
+                    <!-- مميزات الخدمة -->
+                    <div class="mb-4">
+                        <h4 class="text-warning">مميزات الخدمة</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> جودة عالية</li>
+                            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> دعم فني متواصل</li>
+                            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> حلول مرنة تناسب عملك</li>
+                        </ul>
+                    </div>
+
+                    <!-- زر العودة -->
+                    <a class="btn btn-lg btn-warning rounded" href="{% url 'services' %}">
+                        <i class="bi bi-arrow-left"></i> عودة للخدمات
+                    </a>
+                </div>
+
+                <!-- جانب المعلومات -->
+                <div class="col-lg-4">
+                    <div class="service-sidebar rounded p-4 shadow-sm">
+                        <h4 class="mb-3">معلومات الخدمة</h4>
+                        <p><strong>الاسم:</strong> {{ service_item.service_name_ar }}</p>
+                        <p><strong>الوصف:</strong> {{ service_item.service_details_ar|truncatewords:20 }}</p>
+                        <p><strong>تاريخ الإضافة:</strong> {{ service_item.created_at|date:"Y-m-d" }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Details End -->
+{% endblock content_ar %}
+
+
+{% block content_en %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 bg-header mb-5" dir="ltr">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">Services</h1>
+                <a href="{% url 'core:home' %}" class="h5 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="{% url 'services' %}" class="h5 text-white">Services</a>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Service Details Start -->
+    <div id="service-details" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" dir="ltr">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Service Content -->
+                <div class="col-lg-8">
+                    <h2 class="mb-4 text-warning">{{ service_item.service_name }}</h2>
+                    <p class="mb-4">{{ service_item.service_details }}</p>
+
+                    <!-- Service Image -->
+                    {% if service_item.image %}
+                    <div class="mb-4">
+                        <img src="{{ service_item.image.url }}" alt="{{ service_item.service_name }}" class="img-fluid rounded shadow">
+                    </div>
+                    {% endif %}
+
+                    <!-- Features -->
+                    <div class="mb-4">
+                        <h4 class="text-warning">Service Features</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> High Quality</li>
+                            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> 24/7 Support</li>
+                            <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Flexible Solutions</li>
+                        </ul>
+                    </div>
+
+                    <!-- Back Button -->
+                    <a class="btn btn-lg btn-warning rounded" href="{% url 'services' %}">
+                        <i class="bi bi-arrow-left"></i> Back to Services
+                    </a>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="service-sidebar rounded p-4 shadow-sm">
+                        <h4 class="mb-3">Service Info</h4>
+                        <p><strong>Name:</strong> {{ service_item.service_name }}</p>
+                        <p><strong>Description:</strong> {{ service_item.service_details|truncatewords:20 }}</p>
+                        <p><strong>Added On:</strong> {{ service_item.created_at|date:"Y-m-d" }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Details End -->
+{% endblock content_en %}
+

@@ -15,7 +15,7 @@
             <div class="col-lg-4 text-center text-lg-start">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     {% for social in social_media_contacts %}
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ social.url }}"><i class="fab {{ social.icon_name }} fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ social.link }}"><i class="fab {{ social.icon_name }} fw-normal"></i></a>
                     {% endfor %}
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     {% for social in social_media_contacts %}
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ social.url }}"><i class="fab {{ social.icon_name }} fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ social.link }}"><i class="fab {{ social.icon_name }} fw-normal"></i></a>
                     {% endfor %}
                 </div>
             </div>

@@ -17,7 +17,7 @@ urlpatterns += i18n_patterns(
     path('blog/', include('blog.urls'), name='blog'),
     path('hero/', include('hero.urls'), name='hero'),
     path('about/', include('about.urls'), name='about'),
-    # path('services/', include('services.urls'), name='services'),
+    path('services/', include('services.urls'), name='services'),
 )
 
 
